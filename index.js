@@ -75,8 +75,20 @@ const newPerson = new Person({name: "Vito", age: 50, stomach:[]});
         + The `drive` method should return a string "I ran out of fuel at x miles!" x being `odometer`.
 */
 
-function Car() {
+function Car(model, milesPerGallon) { /* arguments */
+  this.model = model;
+  this.milesPerGallon = milesPerGallon;
+  this.tank = 0; /* initialize with a tank at 0 */
+  this.odometer = 0; /* initialize with an odometer at 0 */
+}
 
+Car.prototype.fill = function (gallons) { /* the method for filling the tank in gallons */
+  this.tank = this.tank + gallons;
+}
+
+Car.prototype.drive = function (distance) { /* car's distance */
+  this.odometer = this.odometer + distance; /* odameter's distance is increasing */
+  this.tank = this.tank - distance / this.milesPerGallon; /* tank is decreasing taking milesPerGallon */
 }
 
 /*
