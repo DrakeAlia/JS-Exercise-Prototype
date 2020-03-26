@@ -111,10 +111,10 @@ Baby.prototype.play = function() {
   TASK 4
 
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
-  3. 
-  4. 
+  1. Window or Default binding - Is the most common case for function calls and call any function without a "." before it. EX: 'use strict'; function foo() {console.log(this) } foo();
+  2. Implicit binding - Calling a function with a "." before it. using the value of this is the object just before the final "." EX: const obj = {foo(){ console.log(this); }}; obj.foo();
+  3. Explicit binding - Using one of the three functions call, apply, or bind in function objects. All three provide the value of this. EX: const obj = {}; function foo() { console.log(this); } const functionWithBoundThis = foo.bind(obj); functionWithBoundThis(); 
+  4. New binding - Is when the function that is called with new operator when the code new Something(...) is excuted. /* Have to conme back to this */
 */
 
 
