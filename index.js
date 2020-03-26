@@ -39,14 +39,14 @@ Airplane.prototype.land = function () {
         + It should return a string with `name` and `age`. Example: "Mary, 50"
 */
 
-function Person(name, age) { /* arguments */
+function Person(name, age) { /* arguments and constructor object */
   this.name = name;
-  this.age = age;
+  this.age = age; /* data objects */
   this.stomach = []; /* empty array */
 }
 
 Person.prototype.eat = function (food) { /* Person the ability to "eat" */
-  if (this.stomach.length < 10){ 
+  if (this.stomach.length < 10){ /* 10 items in stomach for the eat method */
     this.stomach.push(food); /* pushed */
   }
 }
@@ -114,7 +114,8 @@ Baby.prototype.play = function() {
   1. Window or Default binding - Is the most common case for function calls and call any function without a "." before it. EX: 'use strict'; function foo() {console.log(this) } foo();
   2. Implicit binding - Calling a function with a "." before it. using the value of this is the object just before the final "." EX: const obj = {foo(){ console.log(this); }}; obj.foo();
   3. Explicit binding - Using one of the three functions call, apply, or bind in function objects. All three provide the value of this. EX: const obj = {}; function foo() { console.log(this); } const functionWithBoundThis = foo.bind(obj); functionWithBoundThis(); 
-  4. New binding - Is when the function that is called with new operator when the code new Something(...) is excuted. /* Have to conme back to this */
+  4. New binding - Is when the function that is called with new operator when the code new Something(...) is excuted. /Have to conme back to this question/
+
 */
 
 
